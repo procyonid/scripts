@@ -2,6 +2,8 @@
 
 text=$1
 
+[ -z "$text" ] && read text
+
 text=$(echo $text | sed 's/[^0-9]*//g')
 
 text=$(echo $text | tr '0' 's')
